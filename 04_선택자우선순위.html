@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            color:blue;
+        }
+        #item1{
+            color:red;
+        }
+        [name="item2"]{
+            color:green;
+        }
+        .item3{
+            color:yellow;
+        }
+        .item4{
+            color:black;
+        }
+        #item4{
+            color: violet !important;;    /*아이디가 클래스보다 높은 순위   !important도 강제로 우선순위를 올려주지만 유지보수가 어려움*/
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="item1">아이템1</li>
+        <li name="item2">아이템2</li>
+        <li class="item3">아이템3</li>
+        <li style="color:aqua;" class="item4" id="item4">아이템4</li> <!--인라인 우선순위가 굉장히 높지만 유지보수가 어려움-->
+        <li>아이템5</li>
+    </ul>
+    
+</body>
+</html>
